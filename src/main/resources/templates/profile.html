@@ -1,199 +1,12 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Kimber</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="/css/album.css" rel="stylesheet">
-</head>
+<div th:replace="header :: head" ></div>
 
 <body>
 
-<header>
+<div th:replace="header :: navbar" ></div>
 
-
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Kimbr</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExample02">
-
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>
-            <div class="form-inline my-2 my-md-0" >
-                <img class="btn btn-outline-success" style="margin-left: 5px;" src="/img/cart_empty.png"></img>
-            </div>
-
-            <div class="form-inline my-2 my-md-0" >
-                <img class="btn btn-outline-success" style="margin-left: 5px;" src="/img/profile.png"></img>
-            </div>
-
-        </div>
-    </nav>
-
-
-    <!--
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">Søk etter</h4>
-
-          <form>
-
-            <div class="form-group">
-                <input type="text" class="form-control" id="inputAddress" placeholder="Varenavn">
-            </div>
-
-            <h4 class="text-white">Uten</h4>
-
-
-              <div class="col-sm-7" >
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Gluten">
-                      <label class="form-check-label" for="Gluten" >
-                          <a style="color:white;"  >Gluten</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Egg">
-                      <label class="form-check-label" for="Egg" >
-                          <a style="color:white;"  >Egg</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Soya">
-                      <label class="form-check-label" for="Soya" >
-                          <a style="color:white;"  >Soya</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Melk">
-                      <label class="form-check-label" for="Melk" >
-                          <a style="color:white;"  >Melk</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Peanotter">
-                      <label class="form-check-label" for="Peanotter" >
-                          <a style="color:white;"  >Peanøtter</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Notter">
-                      <label class="form-check-label" for="Notter" >
-                          <a style="color:white;"  >Nøtter</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="spor">
-                      <label class="form-check-label" for="spor" >
-                          <a style="color:white;"  >spor av nøtter </a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Fisk">
-                      <label class="form-check-label" for="Fisk" >
-                          <a style="color:white;"  >Fisk</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Skalldyr">
-                      <label class="form-check-label" for="Skalldyr" >
-                          <a style="color:white;"  >Skalldyr</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Blotdyr">
-                      <label class="form-check-label" for="Blotdyr" >
-                          <a style="color:white;"  >Bløtdyr</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Sennep">
-                      <label class="form-check-label" for="Sennep" >
-                          <a style="color:white;"  >Sennep</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Sesamfro">
-                      <label class="form-check-label" for="Sesamfro" >
-                          <a style="color:white;"  >Sesamfrø</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Selleri">
-                      <label class="form-check-label" for="Selleri" >
-                          <a style="color:white;"  >Selleri</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Lupin">
-                      <label class="form-check-label" for="Lupin" >
-                          <a style="color:white;"  >Lupin</a>
-                      </label>
-                  </div>
-
-                  <div class="col-sm">
-                      <input class="form-check-input" type="checkbox" id="Svoveldioksid">
-                      <label class="form-check-label" for="Svoveldioksid" >
-                          <a style="color:white;"  >Svoveldioksid og sulfitter</a>
-                      </label>
-                  </div>
-
-              </div>
-
-
-            <button type="submit" class="btn btn-primary" style="margin-top:15px;" >Sign in</button>
-            </form>
-        </div>
-        </div>
-
-
-      </div>
-    </div>
-
-
-  </div>
-  <div class="navbar navbar-dark bg-dark box-shadow">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <strong>Kimbr</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-
-  -->
-</header>
 
 <main role="main">
 
@@ -201,115 +14,131 @@
         <h2 class="display-4">Dine preferanser</h2>
     </div>
 
+    <form th:action="@{/profile}" method="post" >
     <div class="container" style="max-width: 960px;" >
-        <div class="card-deck mb-3 text-center">
+        <div class="card-deck mb-3 ">
             <div class="card mb-4 box-shadow" style="min-width: 220px;" >
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">Allergener</h4>
                 </div>
                 <div class="card-body">
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Gluten">
+                        <input  th:if="${list.contains('Gluten')}==true" class="form-check-input" type="checkbox" id="Gluten" name="Gluten" value="Gluten" checked >
+                        <input  th:if="${list.contains('Gluten')}==false" class="form-check-input" type="checkbox" id="Gluten" name="Gluten" value="Gluten" >
                         <label class="form-check-label" for="Gluten" >
-                            <a style="color:white;"  >Gluten</a>
+                            <a style="color:#E79B15;"  >Gluten</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Egg">
+                        <input th:if="${list.contains('Egg')}==true" class="form-check-input" type="checkbox" id="Egg" name="Egg" vaue="Egg" checked >
+                        <input th:if="${list.contains('Egg')}==false" class="form-check-input" type="checkbox" id="Egg" name="Egg" vaue="Egg">
                         <label class="form-check-label" for="Egg" >
-                            <a style="color:white;"  >Egg</a>
+                            <a style="color:#E79B15;"  >Egg</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Soya">
+                        <input th:if="${list.contains('Soya')}==true" class="form-check-input" type="checkbox" id="Soya"  name="Soya" checked >
+                        <input th:if="${list.contains('Soya')}==false" class="form-check-input" type="checkbox" id="Soya"  name="Soya">
                         <label class="form-check-label" for="Soya" >
-                            <a style="color:white;"  >Soya</a>
+                            <a style="color:#E79B15;"  >Soya</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Melk">
+                        <input th:if="${list.contains('Melk')}==true" class="form-check-input" type="checkbox" id="Melk"  name="Melk" checked >
+                        <input th:if="${list.contains('Melk')}==false" class="form-check-input" type="checkbox" id="Melk"  name="Melk">
                         <label class="form-check-label" for="Melk" >
-                            <a style="color:white;"  >Melk</a>
+                            <a style="color:#E79B15;"  >Melk</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Peanotter">
+                        <input th:if="${list.contains('Peanotter')}==true" class="form-check-input" type="checkbox" id="Peanotter"  name="Peanotter" checked >
+                        <input th:if="${list.contains('Peanotter')}==false" class="form-check-input" type="checkbox" id="Peanotter"  name="Peanotter">
                         <label class="form-check-label" for="Peanotter" >
-                            <a style="color:white;"  >Peanøtter</a>
+                            <a style="color:#E79B15;"  >Peanøtter</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Notter">
+                        <input th:if="${list.contains('Notter')}==true" class="form-check-input" type="checkbox" id="Notter" name="Notter" checked >
+                        <input th:if="${list.contains('Notter')}==false" class="form-check-input" type="checkbox" id="Notter" name="Notter">
                         <label class="form-check-label" for="Notter" >
-                            <a style="color:white;"  >Nøtter</a>
+                            <a style="color:#E79B15;"  >Nøtter</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="spor">
-                        <label class="form-check-label" for="spor" >
-                            <a style="color:white;"  >spor av nøtter </a>
+                        <input th:if="${list.contains('Spor')}==true" class="form-check-input" type="checkbox" id="Spor"  name="Spor" checked >
+                        <input th:if="${list.contains('Spor')}==false" class="form-check-input" type="checkbox" id="Spor"  name="Spor">
+                        <label class="form-check-label" for="Spor" >
+                            <a style="color:#E79B15;"  >spor av nøtter </a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Fisk">
+                        <input th:if="${list.contains('Fisk')}==true" class="form-check-input" type="checkbox" id="Fisk" name="Fisk" checked >
+                        <input th:if="${list.contains('Fisk')}==false" class="form-check-input" type="checkbox" id="Fisk" name="Fisk">
                         <label class="form-check-label" for="Fisk" >
-                            <a style="color:white;"  >Fisk</a>
+                            <a style="color:#E79B15;"  >Fisk</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Skalldyr">
+                        <input th:if="${list.contains('Skalldyr')}==true" class="form-check-input" type="checkbox" id="Skalldyr" name="Skalldyr" checked >
+                        <input th:if="${list.contains('Skalldyr')}==false" class="form-check-input" type="checkbox" id="Skalldyr" name="Skalldyr">
                         <label class="form-check-label" for="Skalldyr" >
-                            <a style="color:white;"  >Skalldyr</a>
+                            <a style="color:#E79B15;"  >Skalldyr</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Blotdyr">
+                        <input th:if="${list.contains('Blotdyr')}==true" class="form-check-input" type="checkbox" id="Blotdyr" name="Blotdyr" checked >
+                        <input th:if="${list.contains('Blotdyr')}==false" class="form-check-input" type="checkbox" id="Blotdyr" name="Blotdyr">
                         <label class="form-check-label" for="Blotdyr" >
-                            <a style="color:white;"  >Bløtdyr</a>
+                            <a style="color:#E79B15;"  >Bløtdyr</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Sennep">
+                        <input th:if="${list.contains('Sennep')}==true" class="form-check-input" type="checkbox" id="Sennep" name="Sennep" checked >
+                        <input th:if="${list.contains('Sennep')}==false" class="form-check-input" type="checkbox" id="Sennep" name="Sennep">
                         <label class="form-check-label" for="Sennep" >
-                            <a style="color:white;"  >Sennep</a>
+                            <a style="color:#E79B15;"  >Sennep</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Sesamfro">
+                        <input th:if="${list.contains('Sesamfro')}==true" class="form-check-input" type="checkbox" id="Sesamfro" name="Sesamfro" checked >
+                        <input th:if="${list.contains('Sesamfro')}==false" class="form-check-input" type="checkbox" id="Sesamfro" name="Sesamfro">
                         <label class="form-check-label" for="Sesamfro" >
-                            <a style="color:white;"  >Sesamfrø</a>
+                            <a style="color:#E79B15;"  >Sesamfrø</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Selleri">
+                        <input th:if="${list.contains('Selleri')}==true" class="form-check-input" type="checkbox" id="Selleri" name="Selleri" checked >
+                        <input th:if="${list.contains('Selleri')}==false" class="form-check-input" type="checkbox" id="Selleri" name="Selleri">
                         <label class="form-check-label" for="Selleri" >
-                            <a style="color:white;"  >Selleri</a>
+                            <a style="color:#E79B15;"  >Selleri</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Lupin">
+                        <input th:if="${list.contains('Lupin')}==true" class="form-check-input" type="checkbox" id="Lupin" name="Lupin" checked >
+                        <input th:if="${list.contains('Lupin')}==false" class="form-check-input" type="checkbox" id="Lupin" name="Lupin">
                         <label class="form-check-label" for="Lupin" >
-                            <a >Lupin</a>
+                            <a style="color:#E79B15;" >Lupin</a>
                         </label>
                     </div>
 
                     <div class="col-sm">
-                        <input class="form-check-input" type="checkbox" id="Svoveldioksid">
+                        <input th:if="${list.contains('Svoveldioksid')}==true" class="form-check-input" type="checkbox" id="Svoveldioksid"  name="Svoveldioksid" checked >
+                        <input th:if="${list.contains('Svoveldioksid')}==false" class="form-check-input" type="checkbox" id="Svoveldioksid"  name="Svoveldioksid">
                         <label class="form-check-label" for="Svoveldioksid" >
-                            <a >Svoveldioksid og sulfitter</a>
+                            <a style="color:#E79B15;" >Svoveldioksid og sulfitter</a>
                         </label>
                     </div>
                 </div>
@@ -320,13 +149,76 @@
                     <h4 class="my-0 font-weight-normal">Animalske produkter</h4>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>10 users included</li>
-                        <li>2 GB of storage</li>
-                        <li>Email support</li>
-                        <li>Help center access</li>
-                    </ul>
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Storfekjott')}==true" class="form-check-input" type="checkbox" id="Storfekjott" name="Storfekjott" checked >
+                        <input th:if="${list.contains('Storfekjott')}==false" class="form-check-input" type="checkbox" id="Storfekjott" name="Storfekjott" >
+                        <label class="form-check-label" for="Storfekjott" >
+                            <a style="color:#E79B15;"  >Storfekjøtt</a>
+                        </label>
+                    </div>
                 </div>
+                <div class="card-body">
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Skalldyr2')}==true" class="form-check-input" type="checkbox" id="Skalldyr2"  name="Skalldyr2" checked >
+                        <input th:if="${list.contains('Skalldyr2')}==false" class="form-check-input" type="checkbox" id="Skalldyr2"  name="Skalldyr2">
+                        <label class="form-check-label" for="Skalldyr2" >
+                            <a style="color:#E79B15;"  >Skalldyr</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Hvitkjott')}==true" class="form-check-input" type="checkbox" id="Hvitkjott" name="Hvitkjott" checked >
+                        <input th:if="${list.contains('Hvitkjott')}==false" class="form-check-input" type="checkbox" id="Hvitkjott" name="Hvitkjott">
+                        <label class="form-check-label" for="Hvitkjott" >
+                            <a style="color:#E79B15;"  >Hvitkjøtt</a>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="card-body">
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Fisk2')}==true" class="form-check-input" type="checkbox" id="Fisk2"  name="Fisk2" checked >
+                        <input th:if="${list.contains('Fisk2')}==false" class="form-check-input" type="checkbox" id="Fisk2"  name="Fisk2">
+                        <label class="form-check-label" for="Fisk2" >
+                            <a style="color:#E79B15;"  >Fisk</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Meieri')}==true" class="form-check-input" type="checkbox" id="Meieri" name="Meieri" checked >
+                        <input th:if="${list.contains('Meieri')}==false" class="form-check-input" type="checkbox" id="Meieri" name="Meieri">
+                        <label class="form-check-label" for="Meieri" >
+                            <a style="color:#E79B15;"  >Meieri produkter</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Egg2')}==true" class="form-check-input" type="checkbox" id="Egg2" name="Egg2" checked >
+                        <input th:if="${list.contains('Egg2')}==false" class="form-check-input" type="checkbox" id="Egg2" name="Egg2">
+                        <label class="form-check-label" for="Egg2" >
+                            <a style="color:#E79B15;"  >Egg</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="col-sm">
+                        <input th:if="${list.contains('Gelatin')}==true" class="form-check-input" type="checkbox" id="Gelatin" name="Gelatin" checked >
+                        <input th:if="${list.contains('Gelatin')}==false" class="form-check-input" type="checkbox" id="Gelatin" name="Gelatin">
+                        <label class="form-check-label" for="Gelatin" >
+                            <a style="color:#E79B15;"  >Gelatin</a>
+                        </label>
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="card mb-4 box-shadow" style="min-width: 220px;" >
@@ -334,12 +226,45 @@
                     <h4 class="my-0 font-weight-normal">E-stoffer</h4>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>10 users included</li>
-                        <li>2 GB of storage</li>
-                        <li>Email support</li>
-                        <li>Help center access</li>
-                    </ul>
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Kurkumin')}==true" class="form-check-input" type="checkbox" id="Kurkumin" name="Kurkumin" checked >
+                            <input th:if="${list.contains('Kurkumin')}==false" class="form-check-input" type="checkbox" id="Kurkumin" name="Kurkumin">
+                            <label class="form-check-label" for="Kurkumin" >
+                                <a style="color:#E79B15;"  >E100 Kurkumin</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Riboflavin')}==true" class="form-check-input" type="checkbox" id="Riboflavin" name="Riboflavin" checked >
+                            <input th:if="${list.contains('Riboflavin')}==false" class="form-check-input" type="checkbox" id="Riboflavin" name="Riboflavin">
+                            <label class="form-check-label" for="Riboflavin" >
+                                <a style="color:#E79B15;"  >E101 Riboflavin</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Tartrazin')}==true" class="form-check-input" type="checkbox" id="Tartrazin" name="Tartrazin" checked >
+                            <input th:if="${list.contains('Tartrazin')}==false" class="form-check-input" type="checkbox" id="Tartrazin" name="Tartrazin">
+                            <label class="form-check-label" for="Tartrazin" >
+                                <a style="color:#E79B15;"  >E102 Tartrazin</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Kinolingult')}==true" class="form-check-input" type="checkbox" id="Kinolingult" name="Kinolingult" checked >
+                            <input th:if="${list.contains('Kinolingult')}==false" class="form-check-input" type="checkbox" id="Kinolingult" name="Kinolingult">
+                            <label class="form-check-label" for="Kinolingult" >
+                                <a style="color:#E79B15;"  >E104 Kinolingult</a>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -349,12 +274,31 @@
                     <h4 class="my-0 font-weight-normal">Butikker</h4>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>10 users included</li>
-                        <li>2 GB of storage</li>
-                        <li>Email support</li>
-                        <li>Help center access</li>
-                    </ul>
+                    <div class="card-body">
+                        <div class="form-check" th:if="${user.getButikk()}=='REMA1000'" >
+                            <input class="form-check-input" type="radio" name="butikk" id="exampleRadios2" value="REMA1000" checked >
+                            <label class="form-check-label" for="exampleRadios2">
+                                REMA1000
+                            </label>
+                            <p></p>
+                            <input class="form-check-input" type="radio" name="butikk" id="exampleRadios3" value="KIWI" >
+                            <label class="form-check-label" for="exampleRadios3">
+                                Kiwi
+                            </label>
+                        </div>
+
+                        <div class="form-check" th:if="${user.getButikk()}=='KIWI'" >
+                            <input class="form-check-input" type="radio" name="butikk" id="exampleRadios2" value="REMA1000" >
+                            <label class="form-check-label" for="exampleRadios2">
+                                REMA1000
+                            </label>
+                            <p></p>
+                            <input class="form-check-input" type="radio" name="butikk" id="exampleRadios3" value="KIWI" checked >
+                            <label class="form-check-label" for="exampleRadios3">
+                                Kiwi
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -363,35 +307,61 @@
                     <h4 class="my-0 font-weight-normal">Produkt kategorier</h4>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>10 users included</li>
-                        <li>2 GB of storage</li>
-                        <li>Email support</li>
-                        <li>Help center access</li>
-                    </ul>
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Nokkelhull')}==true" class="form-check-input" type="checkbox" id="Nokkelhull" name="Nokkelhull" checked >
+                            <input th:if="${list.contains('Nokkelhull')}==false" class="form-check-input" type="checkbox" id="Nokkelhull" name="Nokkelhull">
+                            <label class="form-check-label" for="Nokkelhull" >
+                                <a style="color:#E79B15;"  >Nøkkelhull</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('NytNorge')}==true" class="form-check-input" type="checkbox" id="NytNorge" name="NytNorge" checked >
+                            <input th:if="${list.contains('NytNorge')}==false" class="form-check-input" type="checkbox" id="NytNorge" name="NytNorge">
+                            <label class="form-check-label" for="NytNorge" >
+                                <a style="color:#E79B15;"  >Nyt Norge</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Okologisk')}==true" class="form-check-input" type="checkbox" id="Okologisk" name="Okologisk" checked >
+                            <input th:if="${list.contains('Okologisk')}==false" class="form-check-input" type="checkbox" id="Okologisk" name="Okologisk">
+                            <label class="form-check-label" for="Okologisk" >
+                                <a style="color:#E79B15;"  >Økologisk</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-sm">
+                            <input th:if="${list.contains('Halal')}==true" class="form-check-input" type="checkbox" id="Halal" name="Halal" checked >
+                            <input th:if="${list.contains('Halal')}==false" class="form-check-input" type="checkbox" id="Halal" name="Halal">
+                            <label class="form-check-label" for="Halal" >
+                                <a style="color:#E79B15;"  >Halal</a>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
+
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Lagre</button>
+        <a th:href="@{/}" ><button class="btn btn-outline-primary my-2 my-sm-0" >Fortsett å handle</button></a>
+
+    </div>
+
+    </form>
 
 
 
 </main>
 
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Gå til topp</a>
-        </p>
-        <p>ENT1000 prosjekt</p>
+<div th:replace="header :: bottom" ></div>
 
-    </div>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

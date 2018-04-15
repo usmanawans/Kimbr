@@ -10,10 +10,11 @@
 <main role="main">
 
     <section class="jumbotron text-center col-md-12">
-        <div class="container col-md-12 text-center ">
-            <h2 class="inline" >Din handleliste for</h2>
-            <span  th:if="${butikkNavn} == 'KIWI'" class="badge badge-success inline"><h4>Kiwi</h4></span>
-            <span th:if="${butikkNavn} == 'REMA1000'" class="badge badge-info inline"><h4>REMA1000</h4></span>
+        <div class="container col-md-12 text-center">
+            <h1>Resultater</h1>
+            <form class="form-inline col-md-12 text-center" th:action="@{/search}" method="post" >
+                <input class="form-control text-center col-md-12" th:value="${q}" name="q" type="text" align="center" th:autofocus="true">
+            </form>
         </div>
     </section>
 
@@ -27,9 +28,14 @@
                         <img class="card-img-top" th:src="${product.getBildeAdresse()}" />
                         <div class="card-body">
                             <h4 th:text="${product.getNavn()}" >Pepperoni</h4>
+                            <p>
+                                <span  th:if="${product.getButikk()} == 'KIWI'" class="badge badge-success">Kiwi</span>
+                                <span th:if="${product.getButikk()} == 'REMA1000'" class="badge badge-info">REMA1000</span>
+                            </p>
+                            <p class="card-text" th:text="${product.toString()}" >Kjøtt av svin og storfe (65 %), vann, potetmel, salt, glukose, krydder, løk, stabilisator E451 antioksidant E315, konserveringsmiddel E261, E326, E250.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a th:href="@{/removeProduct/}+${product.get_id()}" ><button type="button" class="btn btn-sm btn-outline-danger">Fjern</button></a>
+                                    <a th:href="@{/addProduct/}+${product.get_id()}" ><button type="button" class="btn btn-sm btn-outline-success">Legg til kassen</button></a>
                                 </div>
                                 <small class="text-muted">00,0 kr</small>
                             </div>
