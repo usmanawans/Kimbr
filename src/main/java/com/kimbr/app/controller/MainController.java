@@ -90,17 +90,27 @@ public class MainController {
 
 
     @RequestMapping("/removeProduct/{id}")
-    public String removeProduct(@PathVariable("id") String id){
+    public String removeProduct(@PathVariable("id") String _id){
 
         User user = userRepository.findAll().get(0);
         String butikk = user.getButikk();
 
-        List<Produkt> temp = user.getHandleliste();
-        temp.remove( produktRepository.findProduktBy_id( id ) );
+        Produkt tempProduct= null;
 
+        List<Produkt> temp =  new ArrayList<>();
+
+        for( Produkt p : user.getHandleliste() ){
+
+            System.out.println( p.get_id() );
+            System.out.println( _id );
+
+            if( !(p.get_id().equals(_id)) )
+                temp.add(p);
+        }
         user.setHandleliste( temp );
 
         userRepository.save(user);
+
         return "redirect:/cart";
     }
 
