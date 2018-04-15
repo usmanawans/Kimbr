@@ -231,9 +231,17 @@ public class MainController {
         for( String str : allergies ){
             for( Produkt p : products ){
 
-                if( p.getNavn().toLowerCase().contains( q.toLowerCase() ) )
-                    searched.add(p);
+                if( p.getNavn().toLowerCase().contains( q.toLowerCase() ) ){
+                    if( !searched.contains(p) )
+                        searched.add(p);
+                }
             }
+        }
+
+        List<Produkt> searched2 = new ArrayList<>();
+
+        for( Produkt p : searched ){
+            searched2.add(p);
         }
 
 
@@ -241,14 +249,14 @@ public class MainController {
             for( Produkt p : searched ){
                 for( Ingrediense i : p.getIngredienser() ){
 
-                    if( i.getNavn().toLowerCase().contains( str.toLowerCase() ) )
-                        searched.remove(p);
+                    if( (i.getNavn().toLowerCase().contains( str.toLowerCase() )) )
+                        searched2.remove(p);
                 }
-
-
             }
         }
 
-        return searched;
+
+
+        return searched2;
     }
 }

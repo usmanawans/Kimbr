@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -20,9 +22,14 @@ public class ProfileController {
     public String profile( Model model ){
 
         User user = userRepository.findAll().get(0);
+        List<String> list = new ArrayList<>();
+
+        for( String s : user.getAllergier().values() ){
+            list.add( s );
+        }
 
         model.addAttribute("user", user);
-        model.addAttribute("list", user.getAllergier().values());
+        model.addAttribute("list", list);
 
 
         return "profile";
@@ -72,91 +79,91 @@ public class ProfileController {
 
         if( !Gluten.isEmpty() )
             allergier.put( Gluten, Gluten );
-        else if( !Egg.isEmpty() )
+        if( !Egg.isEmpty() )
             allergier.put( Egg, Egg );
 
-        else if( !Soya.isEmpty() )
+        if( !Soya.isEmpty() )
             allergier.put( Soya, Soya );
 
-        else if( !Melk.isEmpty() )
+        if( !Melk.isEmpty() )
             allergier.put( Melk, Melk );
 
-        else if( !Peanotter.isEmpty() )
+        if( !Peanotter.isEmpty() )
             allergier.put( Peanotter, Peanotter );
 
-        else if( !Notter.isEmpty() )
+        if( !Notter.isEmpty() )
             allergier.put( Notter, Notter );
 
-        else if( !Spor.isEmpty() )
+        if( !Spor.isEmpty() )
             allergier.put( Spor, Spor );
 
-        else if( !Fisk.isEmpty() )
+        if( !Fisk.isEmpty() )
             allergier.put( Egg, Fisk );
 
-        else if( !Skalldyr.isEmpty() )
+        if( !Skalldyr.isEmpty() )
             allergier.put( Skalldyr, Skalldyr );
 
-        else if( !Blotdyr.isEmpty() )
+        if( !Blotdyr.isEmpty() )
             allergier.put( Blotdyr, Blotdyr );
 
-        else if( !Sennep.isEmpty() )
+        if( !Sennep.isEmpty() )
             allergier.put( Sennep, Sennep );
 
-        else if( !Sesamfro.isEmpty() )
+        if( !Sesamfro.isEmpty() )
             allergier.put( Sesamfro, Sesamfro );
 
-        else if( !Selleri.isEmpty() )
+        if( !Selleri.isEmpty() )
             allergier.put( Selleri, Selleri );
 
-        else if( !Lupin.isEmpty() )
+        if( !Lupin.isEmpty() )
             allergier.put( Lupin, Lupin );
 
-        else if( !Svoveldioksid.isEmpty() )
+        if( !Svoveldioksid.isEmpty() )
             allergier.put( Svoveldioksid, Svoveldioksid );
 
-        else if( !Storfekjott.isEmpty() )
+        if( !Storfekjott.isEmpty() )
             allergier.put( Storfekjott, Storfekjott );
 
-        else if( !Skalldyr2.isEmpty() )
+        if( !Skalldyr2.isEmpty() )
             allergier.put( Skalldyr2, "Skalldyr" );
 
-        else if( !Hvitkjott.isEmpty() )
+        if( !Hvitkjott.isEmpty() )
             allergier.put( Hvitkjott, Hvitkjott );
 
-        else if( !Fisk2.isEmpty() )
+        if( !Fisk2.isEmpty() )
             allergier.put( Fisk2, "Fisk" );
 
-        else if( !Meieri.isEmpty() )
+        if( !Meieri.isEmpty() )
             allergier.put( Meieri, Meieri );
 
-        else if( !Egg2.isEmpty() )
+        if( !Egg2.isEmpty() )
             allergier.put( Egg2, "Egg" );
 
-        else if( !Gelatin.isEmpty() )
+        if( !Gelatin.isEmpty() )
             allergier.put( Gelatin, Gelatin );
 
-        else if( !Kurkumin.isEmpty() )
+        if( !Kurkumin.isEmpty() )
             allergier.put( Kurkumin, Kurkumin );
 
-        else if( !Riboflavin.isEmpty() )
+        if( !Riboflavin.isEmpty() )
             allergier.put( Riboflavin, Riboflavin );
 
-        else if( !Tartrazin.isEmpty() )
+        if( !Tartrazin.isEmpty() )
             allergier.put( Tartrazin, Tartrazin );
 
-        else if( !Kinolingult.isEmpty() )
+        if( !Kinolingult.isEmpty() )
             allergier.put( Kinolingult, Kinolingult );
 
-        else if( !Nokkelhull.isEmpty() )
+        if( !Nokkelhull.isEmpty() )
             allergier.put( Nokkelhull, Nokkelhull );
 
-        else if( !NytNorge.isEmpty() )
+        if( !NytNorge.isEmpty() )
             allergier.put( NytNorge, NytNorge );
 
-        else if( !Okologisk.isEmpty() )
+        if( !Okologisk.isEmpty() )
             allergier.put( Okologisk, Okologisk );
 
-        else if( !Halal.isEmpty() )
+        if( !Halal.isEmpty() )
             allergier.put( Halal, Halal );
 
 
