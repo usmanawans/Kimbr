@@ -101,9 +101,6 @@ public class MainController {
 
         for( Produkt p : user.getHandleliste() ){
 
-            System.out.println( p.get_id() );
-            System.out.println( _id );
-
             if( !(p.get_id().equals(_id)) )
                 temp.add(p);
         }
