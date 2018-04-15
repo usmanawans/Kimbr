@@ -120,7 +120,7 @@ public class MainController {
         user.addProdukt( produktRepository.findProduktBy_id( id ) );
 
         userRepository.save(user);
-        return "redirect:/";
+        return "redirect:/cart";
     }
 
     @RequestMapping("/addTestData")
