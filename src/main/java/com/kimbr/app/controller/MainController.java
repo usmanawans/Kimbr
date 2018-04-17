@@ -133,6 +133,7 @@ public class MainController {
         tineHelmelkListe.add( new Ingrediense( "Protein", "4,50 g" ) );
         tineHelmelkListe.add( new Ingrediense( "Protein", "3,40 g" ) );
         tineHelmelkListe.add( new Ingrediense( "Salt", "0,10 g" ) );
+        tineHelmelkListe.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Tine Helmelk 1l", "melk1l", "KIWI", tineHelmelkListe) );
 
 
@@ -143,6 +144,7 @@ public class MainController {
         glutenfriMelblandingGrovListe.add( new Ingrediense( "bokhvetemel", "" ) );
         glutenfriMelblandingGrovListe.add( new Ingrediense( "risbakemel", "" ) );
         glutenfriMelblandingGrovListe.add( new Ingrediense( "druesukker", "" ) );
+        glutenfriMelblandingGrovListe.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Glutenfri MB Grov", "gfgrove", "KIWI", glutenfriMelblandingGrovListe) );
 
 
@@ -159,6 +161,7 @@ public class MainController {
         //Pizza Grandiosa Original, 575 g
         List<Ingrediense> pizzaListe = new ArrayList<Ingrediense>();
         pizzaListe.add( new Ingrediense( "Gluten", "" ) );
+        pizzaListe.add( new Ingrediense( "Storfekjøtt", "" ) );
         pizzaListe.add( new Ingrediense( "Soyabønner", "" ) );
         pizzaListe.add( new Ingrediense( "Melk", "" ) );
         produktRepository.save( new Produkt("Pizza Grandiosa 575g", "pizza", "KIWI", pizzaListe) );
@@ -179,8 +182,7 @@ public class MainController {
         tineHelmelkListeREMA1000.add( new Ingrediense( "Energi", "264 kJ / 63 kcal" ) );
         tineHelmelkListeREMA1000.add( new Ingrediense( "Fett", "3,50 g" ) );
         tineHelmelkListeREMA1000.add( new Ingrediense( "Protein", "4,50 g" ) );
-        tineHelmelkListeREMA1000.add( new Ingrediense( "Protein", "3,40 g" ) );
-        tineHelmelkListeREMA1000.add( new Ingrediense( "Salt", "0,10 g" ) );
+        tineHelmelkListeREMA1000.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Tine Helmelk 1l", "melk1l", "REMA1000", tineHelmelkListeREMA1000) );
 
 
@@ -191,6 +193,7 @@ public class MainController {
         glutenfriMelblandingGrovListeREMA1000.add( new Ingrediense( "bokhvetemel", "" ) );
         glutenfriMelblandingGrovListeREMA1000.add( new Ingrediense( "risbakemel", "" ) );
         glutenfriMelblandingGrovListeREMA1000.add( new Ingrediense( "druesukker", "" ) );
+        glutenfriMelblandingGrovListeREMA1000.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Glutenfri MB Grov", "gfgrove", "KIWI", glutenfriMelblandingGrovListeREMA1000) );
 
 
@@ -217,6 +220,76 @@ public class MainController {
         glutenfripizzaListeREMA1000.add( new Ingrediense( "Soyabønner", "" ) );
         glutenfripizzaListeREMA1000.add( new Ingrediense( "Melk", "" ) );
         produktRepository.save( new Produkt("Glutenfri Pizza 575g", "gfpizza", "REMA1000", glutenfripizzaListeREMA1000) );
+
+
+        // new for rema1000
+
+        //Makrell i tomat 170g, 575 g
+        List<Ingrediense> makrellREMA1000 = new ArrayList<Ingrediense>();
+        makrellREMA1000.add( new Ingrediense( "Fisk", "" ) );
+        makrellREMA1000.add( new Ingrediense( "Makrellfilet", "" ) );
+        makrellREMA1000.add( new Ingrediense( "tomatsaus", "" ) );
+        makrellREMA1000.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Makrell i tomat 170g", "makrellfilet", "REMA1000", makrellREMA1000) );
+
+
+        //Kjøttpudding 500 g
+        List<Ingrediense> kjottpudding1000 = new ArrayList<Ingrediense>();
+        kjottpudding1000.add( new Ingrediense( "Kjott", "" ) );
+        kjottpudding1000.add( new Ingrediense( "Storfekjøtt", "" ) );
+        kjottpudding1000.add( new Ingrediense( "gelatin", "" ) );
+        produktRepository.save( new Produkt("Kjøttpudding 500g", "kjottpudding", "REMA1000", kjottpudding1000) );
+
+
+        //Piano Sjokoladepudding
+        List<Ingrediense> sjokoladepudding1000 = new ArrayList<Ingrediense>();
+        sjokoladepudding1000.add( new Ingrediense( "Melk", "" ) );
+        sjokoladepudding1000.add( new Ingrediense( "Sukker", "" ) );
+        sjokoladepudding1000.add( new Ingrediense( "Aroma", "" ) );
+        sjokoladepudding1000.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Piano Sjokoladepudding", "sjokoladepudding", "REMA1000", sjokoladepudding1000) );
+
+        //Piano Sjokoladepudding
+        List<Ingrediense> fiskepudding1000 = new ArrayList<Ingrediense>();
+        fiskepudding1000.add( new Ingrediense( "Melk", "" ) );
+        fiskepudding1000.add( new Ingrediense( "Sukker", "" ) );
+        fiskepudding1000.add( new Ingrediense( "Aroma", "" ) );
+        fiskepudding1000.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Fiskepudding Snabb 340g", "fiskepudding", "REMA1000", fiskepudding1000) );
+
+
+        //Makrell i tomat 170g, 575 g
+        List<Ingrediense> makrellKIWI = new ArrayList<Ingrediense>();
+        makrellKIWI.add( new Ingrediense( "Fisk", "" ) );
+        makrellKIWI.add( new Ingrediense( "Makrellfilet", "" ) );
+        makrellKIWI.add( new Ingrediense( "tomatsaus", "" ) );
+        makrellKIWI.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Makrell i tomat 170g", "makrellfilet", "KIWI", makrellKIWI) );
+
+
+        //Kjøttpudding 500 g
+        List<Ingrediense> kjottpuddingKIWI = new ArrayList<Ingrediense>();
+        kjottpuddingKIWI.add( new Ingrediense( "Kjott", "" ) );
+        kjottpuddingKIWI.add( new Ingrediense( "Storfekjøtt", "" ) );
+        kjottpuddingKIWI.add( new Ingrediense( "gelatin", "" ) );
+        produktRepository.save( new Produkt("Kjøttpudding 500g", "kjottpudding", "KIWI", kjottpuddingKIWI) );
+
+
+        //Piano Sjokoladepudding
+        List<Ingrediense> sjokoladepuddingKIWI = new ArrayList<Ingrediense>();
+        sjokoladepuddingKIWI.add( new Ingrediense( "Melk", "" ) );
+        sjokoladepuddingKIWI.add( new Ingrediense( "Sukker", "" ) );
+        sjokoladepuddingKIWI.add( new Ingrediense( "Aroma", "" ) );
+        sjokoladepuddingKIWI.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Piano Sjokoladepudding", "sjokoladepudding", "KIWI", sjokoladepuddingKIWI) );
+
+        //Piano Sjokoladepudding
+        List<Ingrediense> fiskepuddingKIWI = new ArrayList<Ingrediense>();
+        fiskepuddingKIWI.add( new Ingrediense( "Melk", "" ) );
+        fiskepuddingKIWI.add( new Ingrediense( "Sukker", "" ) );
+        fiskepuddingKIWI.add( new Ingrediense( "Aroma", "" ) );
+        fiskepuddingKIWI.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Fiskepudding Snabb 340g", "fiskepudding", "KIWI", fiskepuddingKIWI) );
 
 
         return "redirect:/";
