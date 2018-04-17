@@ -98,7 +98,7 @@ public class ProfileController {
             allergier.put( Spor, Spor );
 
         if( !Fisk.isEmpty() )
-            allergier.put( Egg, Fisk );
+            allergier.put( Fisk, Fisk );
 
         if( !Skalldyr.isEmpty() )
             allergier.put( Skalldyr, Skalldyr );
@@ -123,6 +123,21 @@ public class ProfileController {
 
         if( !Storfekjott.isEmpty() )
             allergier.put( Storfekjott, Storfekjott );
+
+        if( !Storfekjott.isEmpty() )
+            allergier.put( "kjøtt", "kjøtt" );
+
+        if( !Storfekjott.isEmpty() )
+            allergier.put( "kjott", "kjott" );
+
+        if( Storfekjott.isEmpty() )
+            allergier.remove("kjøtt");
+
+        if( Storfekjott.isEmpty() )
+            allergier.remove("kjott");
+
+        if( Storfekjott.isEmpty() )
+            System.out.println( Storfekjott );
 
         if( !Skalldyr2.isEmpty() )
             allergier.put( Skalldyr2, "Skalldyr" );

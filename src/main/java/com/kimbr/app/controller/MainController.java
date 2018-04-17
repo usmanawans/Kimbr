@@ -33,7 +33,7 @@ public class MainController {
         String butikk = user.getButikk();
 
         List<Produkt> temp = new ArrayList<>();
-        temp =  produktRepository.findProduktsByButikk( "KIWI" );
+        temp =  produktRepository.findProduktsByButikk( user.getButikk() );
 
         model.addAttribute("user", user);
         model.addAttribute("list", temp);
@@ -249,11 +249,11 @@ public class MainController {
         sjokoladepudding1000.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Piano Sjokoladepudding", "sjokoladepudding", "REMA1000", sjokoladepudding1000) );
 
-        //Piano Sjokoladepudding
+        //Fiskepudding Snabb 340g
         List<Ingrediense> fiskepudding1000 = new ArrayList<Ingrediense>();
+        fiskepudding1000.add( new Ingrediense( "Fisk", "" ) );
+        fiskepudding1000.add( new Ingrediense( "Hvitlaks", "" ) );
         fiskepudding1000.add( new Ingrediense( "Melk", "" ) );
-        fiskepudding1000.add( new Ingrediense( "Sukker", "" ) );
-        fiskepudding1000.add( new Ingrediense( "Aroma", "" ) );
         fiskepudding1000.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Fiskepudding Snabb 340g", "fiskepudding", "REMA1000", fiskepudding1000) );
 
@@ -285,9 +285,9 @@ public class MainController {
 
         //Piano Sjokoladepudding
         List<Ingrediense> fiskepuddingKIWI = new ArrayList<Ingrediense>();
+        fiskepuddingKIWI.add( new Ingrediense( "Fisk", "" ) );
+        fiskepuddingKIWI.add( new Ingrediense( "Hvitlaks", "" ) );
         fiskepuddingKIWI.add( new Ingrediense( "Melk", "" ) );
-        fiskepuddingKIWI.add( new Ingrediense( "Sukker", "" ) );
-        fiskepuddingKIWI.add( new Ingrediense( "Aroma", "" ) );
         fiskepuddingKIWI.add( new Ingrediense( "Hilal", "" ) );
         produktRepository.save( new Produkt("Fiskepudding Snabb 340g", "fiskepudding", "KIWI", fiskepuddingKIWI) );
 
