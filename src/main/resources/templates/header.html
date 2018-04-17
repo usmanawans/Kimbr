@@ -5,7 +5,7 @@
 
 <header th:fragment="navbar" >
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" th:href="@{/}">Kimbr</a>
+        <a class="navbar-brand" th:href="@{/}" style="color:#ff9900; font-weight: bold;" >Kimbr</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,11 +16,11 @@
                 <input class="form-control" name="q" type="text" placeholder="Søk">
             </form>
             <div class="form-inline my-2 my-md-0" >
-                <a th:href="@{/cart}" ><img class="btn btn-outline-success" style="margin-left: 5px;" src="/img/cart_empty.png"></img></a>
+                <a th:href="@{/cart}" ><img class="btn btn-outline-warning" style="margin-left: 5px;" src="/img/cart_empty.png"></img></a>
             </div>
 
             <div class="form-inline my-2 my-md-0" >
-                <a th:href="@{/profile}" ><img class="btn btn-outline-success" style="margin-left: 5px;" src="/img/profile.png"></img></a>
+                <a th:href="@{/profile}" ><img class="btn btn-outline-warning" style="margin-left: 5px;" src="/img/profile.png"></img></a>
             </div>
 
         </div>
