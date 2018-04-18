@@ -292,6 +292,44 @@ public class MainController {
         produktRepository.save( new Produkt("Fiskepudding Snabb 340g", "fiskepudding", "KIWI", fiskepuddingKIWI) );
 
 
+        //Oreo Rull Kjeks
+        List<Ingrediense> orioKIWI = new ArrayList<Ingrediense>();
+        orioKIWI.add( new Ingrediense( "Palm", "" ) );
+        orioKIWI.add( new Ingrediense( "Hvitlaks", "" ) );
+        orioKIWI.add( new Ingrediense( "Melk", "" ) );
+        orioKIWI.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Oreo Rull Kjeks 157g", "orio", "KIWI", orioKIWI) );
+
+
+
+        //Safari Kjeks
+        List<Ingrediense> safariKIWI = new ArrayList<Ingrediense>();
+        safariKIWI.add( new Ingrediense( "Notter", "" ) );
+        safariKIWI.add( new Ingrediense( "Gluten", "" ) );
+        safariKIWI.add( new Ingrediense( "Melk", "" ) );
+        safariKIWI.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Safari Kjeks 200g", "safari", "KIWI", safariKIWI) );
+
+
+        //Oreo Rull Kjeks
+        List<Ingrediense> orioREMA = new ArrayList<Ingrediense>();
+        orioREMA.add( new Ingrediense( "Palm", "" ) );
+        orioREMA.add( new Ingrediense( "Hvitlaks", "" ) );
+        orioREMA.add( new Ingrediense( "Melk", "" ) );
+        orioREMA.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Oreo Rull Kjeks 157g", "orio", "REMA1000", orioREMA) );
+
+
+
+        //Safari Kjeks
+        List<Ingrediense> safariREMA = new ArrayList<Ingrediense>();
+        safariREMA.add( new Ingrediense( "Notter", "" ) );
+        safariREMA.add( new Ingrediense( "Gluten", "" ) );
+        safariREMA.add( new Ingrediense( "Melk", "" ) );
+        safariREMA.add( new Ingrediense( "Hilal", "" ) );
+        produktRepository.save( new Produkt("Safari Kjeks 200g", "safari", "REMA1000", safariREMA) );
+
+
         return "redirect:/";
     }
 
